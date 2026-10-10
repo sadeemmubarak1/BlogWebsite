@@ -1,0 +1,19 @@
+
+{% extends "master.html" %}
+
+{% block title %}
+Home - Blog Website
+{% endblock %}
+
+{% block content %}
+<h2>Welcome to Blog Website</h2>
+
+<p>Explore our users, blog posts, comments, and categories.</p>
+
+<ul>
+    <li><a href="{% url 'users' %}">View All Users</a></li>
+    <li><a href="{% url 'blogs' %}">View All Blogs</a></li>
+    <li><a href="{% url 'comments' %}">View All Comments</a></li>
+    <li><a href="{% url 'categories' %}">View All Categories</a></li>
+</ul>
+{% endblock %}

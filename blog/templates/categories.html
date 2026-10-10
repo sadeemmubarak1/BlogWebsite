@@ -1,0 +1,17 @@
+
+{% extends "master.html" %}
+
+{% block title %}Categories - Blog Website{% endblock %}
+
+{% block content %}
+<h2>All Categories</h2>
+
+<ul>
+    {% for category in categories %}
+        <li>{{ category.name }}</li>
+    {% empty %}
+        <li>No categories found.</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

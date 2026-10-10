@@ -1,0 +1,24 @@
+
+{% extends "master.html" %}
+
+{% block title %}Blogs - Blog Website{% endblock %}
+
+{% block content %}
+<h2>All Blog Posts</h2>
+
+{% for post in posts %}
+    <article>
+        <h3>
+            <a href="{% url 'blogdetails' post.id %}">
+                {{ post.title }}
+            </a>
+        </h3>
+
+        <p>Category: {{ post.category.name }}</p>
+        <p>Published: {{ post.date_published|date:"Y-m-d" }}</p>
+    </article>
+{% empty %}
+    <p>No blog posts found.</p>
+{% endfor %}
+
+{% endblock %}

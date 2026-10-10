@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Blog Website{% endblock %}</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+            line-height: 1.6;
+        }
+
+        nav a {
+            margin-right: 15px;
+        }
+
+        article {
+            border-bottom: 1px solid #ddd;
+            padding: 12px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Blog Website</h1>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/users/">Users</a>
+            <a href="/blogs/">Blogs</a>
+            <a href="/comments/">Comments</a>
+            <a href="/categories/">Categories</a>
+        </nav>
+
+        <hr>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <hr>
+        <p>Blog Website - Django Project</p>
+    </footer>
+
+</body>
+</html>

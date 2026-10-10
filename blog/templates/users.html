@@ -1,0 +1,18 @@
+
+{% extends "master.html" %}
+
+{% block title %}Users - Blog Website{% endblock %}
+
+{% block content %}
+<h2>All Users</h2>
+
+{% for user in users %}
+    <article>
+        <h3>{{ user.username }}</h3>
+        <p>Email: {{ user.email }}</p>
+    </article>
+{% empty %}
+    <p>No users found.</p>
+{% endfor %}
+
+{% endblock %}
